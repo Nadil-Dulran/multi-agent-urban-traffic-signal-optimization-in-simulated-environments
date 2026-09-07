@@ -2,12 +2,12 @@ import os
 
 class Config:
     DEBUG = True
-    USE_GUI = True
+    USE_GUI = False
     STEP_LENGTH = 1.0
     AUTO_START_STEPPING = True
     STEP_DELAY = 0.1
     HOST = '0.0.0.0'
-    PORT = 5000
+    PORT = 5001
 
 class ProductionConfig(Config):
     DEBUG = False
@@ -16,7 +16,7 @@ class ProductionConfig(Config):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    USE_GUI = True
+    USE_GUI = False
 
 # Load based on FLASK_ENV
 env = os.getenv('FLASK_ENV', 'development')
