@@ -2,7 +2,7 @@ import os
 
 class Config:
     DEBUG = True
-    USE_GUI = False
+    USE_GUI = True
     STEP_LENGTH = 1.0
     AUTO_START_STEPPING = True
     STEP_DELAY = 0.1
@@ -11,12 +11,12 @@ class Config:
 
 class ProductionConfig(Config):
     DEBUG = False
-    USE_GUI = False
+    USE_GUI = True
     STEP_DELAY = 0.05
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    USE_GUI = False
+    USE_GUI = True
 
 # Load based on FLASK_ENV
 env = os.getenv('FLASK_ENV', 'development')
