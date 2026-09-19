@@ -7,11 +7,11 @@ class Config:
     AUTO_START_STEPPING = True
     STEP_DELAY = 0.1
     HOST = '0.0.0.0'
-    PORT = 5000
+    PORT = 5001
 
 class ProductionConfig(Config):
     DEBUG = False
-    USE_GUI = False
+    USE_GUI = True
     STEP_DELAY = 0.05
 
 class DevelopmentConfig(Config):
